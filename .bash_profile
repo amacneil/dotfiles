@@ -7,15 +7,7 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# docker-machine
-eval "$(docker-machine env default 2> /dev/null)"
-
-# bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  source $(brew --prefix)/etc/bash_completion
-fi
-
-# pure git awesomeness
+# git prompt
 source ~/.git-prompt.sh
 PROMPT_COMMAND='__git_ps1 "\w" "\\\$ "'
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -28,6 +20,7 @@ alias vim='nvim'
 # docker
 alias dk='docker'
 alias dkc='docker-compose'
+alias dm='docker-machine start default && eval "$(docker-machine env default)"'
 
 # bundler
 alias b='bundle'
