@@ -4,6 +4,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -22,6 +23,7 @@ set ignorecase smartcase
 set list
 set listchars=tab:▸\ ,trail:▫
 set number
+set tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 
 :let mapleader = ","
 map <C-n> :NERDTreeToggle<CR>
