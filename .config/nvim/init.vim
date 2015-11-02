@@ -21,6 +21,7 @@ set encoding=utf-8
 set ignorecase smartcase
 set list
 set listchars=tab:▸\ ,trail:▫
+set number
 
 :let mapleader = ","
 map <C-n> :NERDTreeToggle<CR>
