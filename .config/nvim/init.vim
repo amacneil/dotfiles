@@ -23,6 +23,7 @@ set ignorecase smartcase
 set list
 set listchars=tab:▸\ ,trail:▫
 set number
+set nohlsearch
 set tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 
 :let mapleader = ","
