@@ -9,7 +9,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # git prompt
 source ~/.git-prompt.sh
-PROMPT_COMMAND='__git_ps1 "\w" "\\\$ "'
+PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 
