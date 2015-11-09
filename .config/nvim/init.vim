@@ -6,6 +6,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'fatih/vim-go'
+Plug 'bling/vim-airline'
 
 call plug#end()
 
