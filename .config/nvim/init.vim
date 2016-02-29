@@ -5,8 +5,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'bling/vim-airline'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -27,15 +29,22 @@ set list
 set listchars=tab:▸\ ,trail:▫
 set nohlsearch " don't highlight all search matches
 set number " line numbers
+set ruler " column numbers
 set tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 
 autocmd Filetype go setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+autocmd Filetype make setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+autocmd Filetype dockerfile setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 
-:let mapleader = ","
+let mapleader = ','
+let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
+
 map <C-n> :NERDTreeToggle<CR>
-nnoremap <leader><space> :call StripWhitespace()<CR>
-nnoremap <leader>a :Ag<space>
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+noremap <leader><space> :call StripWhitespace()<CR>
+noremap <leader>a :Ag<space>
+noremap <leader>gi :w<CR>:GoInstall<CR>
+noremap <leader>s :sort i<CR>
+noremap <silent> <C-l> :nohl<CR><C-l>
 
 " The Silver Searcher
 " https://robots.thoughtbot.com/faster-grepping-in-vim
