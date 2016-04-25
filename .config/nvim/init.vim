@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
