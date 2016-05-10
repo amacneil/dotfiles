@@ -1,6 +1,6 @@
-#!/bin/sh
-set -ex
+#!/bin/sh -ex
 
+mkdir -p ~/.config
 ln -sf $PWD/.bash_profile ~/.bash_profile
 ln -sf $PWD/.bash_profile ~/.bashrc
 ln -sf $PWD/.config/nvim ~/.config/
