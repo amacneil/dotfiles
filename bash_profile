@@ -9,7 +9,7 @@ export GETHDEV_OPTS='--datadir /tmp/gethdev --ipcpath ~/Library/Ethereum/geth.ip
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # git prompt
-source ~/.git-prompt.sh
+source "$(dirname "${BASH_SOURCE[0]}")/git-prompt.sh"
 PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
