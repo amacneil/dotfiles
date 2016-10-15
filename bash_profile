@@ -18,13 +18,6 @@ GIT_PS1_SHOWCOLORHINTS=true
 alias vi='nvim'
 alias vim='nvim'
 
-# docker
-alias dk='docker'
-alias dkc='docker-compose'
-alias dm='docker-machine start default; eval "$(docker-machine env default)"'
-alias dmr='docker-machine stop default && dm'
-eval "$(docker-machine env default 2> /dev/null)"
-
 # bundler
 alias b='bundle'
 alias be='bundle exec'
