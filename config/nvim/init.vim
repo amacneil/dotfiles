@@ -10,6 +10,8 @@ Plug 'fatih/vim-go'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tomlion/vim-solidity'
+Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 call plug#end()
 
@@ -23,7 +25,7 @@ function! StripWhitespace()
   call cursor(previous_cursor_line, previous_cursor_column)
 endfunction
 
-set clipboard=unnamed " use system clipboard
+set clipboard=unnamedplus " use system clipboard
 set encoding=utf-8
 set ignorecase smartcase
 set list
@@ -36,6 +38,7 @@ set tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 autocmd Filetype go setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd Filetype make setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd Filetype dockerfile setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+autocmd Filetype cmake setlocal commentstring=#\ %s
 
 let mapleader = ','
 let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
@@ -46,6 +49,18 @@ noremap <leader>a :Ag<space>
 noremap <leader>gi :w<CR>:GoInstall<CR>
 noremap <leader>s :sort i<CR>
 noremap <silent> <C-l> :nohl<CR><C-l>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 " The Silver Searcher
 " https://robots.thoughtbot.com/faster-grepping-in-vim
