@@ -50,6 +50,9 @@ noremap <leader>gi :w<CR>:GoInstall<CR>
 noremap <leader>s :sort i<CR>
 noremap <silent> <C-l> :nohl<CR><C-l>
 
+" vim-go
+let g:go_fmt_command = "goimports"
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
