@@ -39,6 +39,8 @@ autocmd Filetype go setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd Filetype make setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd Filetype dockerfile setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd Filetype cmake setlocal commentstring=#\ %s
+autocmd Filetype cpp setlocal commentstring=//\ %s
+autocmd Filetype tf setlocal commentstring=#\ %s
 
 let mapleader = ','
 let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
@@ -64,6 +66,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_shell_checkers = ['shellcheck']
 
 " The Silver Searcher
 " https://robots.thoughtbot.com/faster-grepping-in-vim
