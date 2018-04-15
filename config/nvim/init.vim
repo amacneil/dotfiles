@@ -48,6 +48,7 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__$']
 map <C-n> :NERDTreeToggle<CR>
 noremap <leader><space> :call StripWhitespace()<CR>
 noremap <leader>a :Ag<space>
+noremap <leader>gb :w<CR>:GoBuild<CR>
 noremap <leader>gi :w<CR>:GoInstall<CR>
 noremap <leader>s :sort i<CR>
 noremap <silent> <C-l> :nohl<CR><C-l>
