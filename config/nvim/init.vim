@@ -12,6 +12,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tomlion/vim-solidity'
 Plug 'scrooloose/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
