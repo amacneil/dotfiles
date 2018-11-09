@@ -73,6 +73,9 @@ let g:syntastic_shell_checkers = ['shellcheck']
 " The Silver Searcher
 " https://robots.thoughtbot.com/faster-grepping-in-vim
 if executable('ag')
+  " ag.vim
+  let g:ag_prg = 'ag --column --nogroup --noheading --nobreak'
+
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
