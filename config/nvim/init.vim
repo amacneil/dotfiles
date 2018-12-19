@@ -1,7 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
