@@ -11,3 +11,6 @@ include="$(echo ". $PWD/bash_profile" | sed "s|$HOME|~|")"
 if [ -z "$(grep "$include" ~/.bash_profile)" ]; then
     echo "$include" >> ~/.bash_profile
 fi
+
+# one-time git setup
+./git-config.sh
