@@ -25,7 +25,13 @@ function! StripWhitespace()
   call cursor(previous_cursor_line, previous_cursor_column)
 endfunction
 
-set clipboard=unnamedplus " use system clipboard
+" use system clipboard
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed " macOS
+else
+  set clipboard=unnamedplus " linux
+endif
+
 set encoding=utf-8
 set ignorecase smartcase
 set list
