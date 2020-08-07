@@ -33,6 +33,7 @@ else
 endif
 
 set encoding=utf-8
+set directory=~/.vim/swap//
 set ignorecase smartcase
 set list
 set listchars=tab:▸\ ,trail:▫

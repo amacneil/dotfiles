@@ -5,6 +5,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 echo "==> configure vim"
 (set -x; ln -sf "$PWD/vimrc" ~/.vimrc)
+(set -x; mkdir -p ~/.vim/swap)
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
   (set -x; curl -fsSLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)
