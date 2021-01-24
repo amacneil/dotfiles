@@ -1,4 +1,5 @@
 # general
+bindkey -e
 export EDITOR=vim
 export CLICOLOR=1
 
