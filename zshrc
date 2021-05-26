@@ -19,13 +19,14 @@ alias gp='git push'
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
 alias gco='git checkout'
-alias gcm='git checkout master'
+alias gcm='git checkout main || git checkout master'
 alias gcd='git checkout develop'
 alias glg='git log --stat --max-count=10'
 alias glgg='git log --graph --max-count=10'
 alias glo='git log --oneline --decorate --color'
 alias glog='git log --oneline --decorate --color --graph'
 alias ga='git add'
+alias yolopr='gh pr create && gh pr merge --squash --auto'
 
 # go bin
 if command -v go > /dev/null; then
