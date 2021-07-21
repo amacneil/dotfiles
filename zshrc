@@ -3,6 +3,11 @@ bindkey -e
 export EDITOR=vim
 export CLICOLOR=1
 
+# fix for tilix on gnome
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    . /etc/profile.d/vte-2.91.sh
+fi
+
 # git prompt
 . "${0:a:h}/git-prompt.sh"
 GIT_PS1_SHOWDIRTYSTATE=true
