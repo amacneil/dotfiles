@@ -33,6 +33,9 @@ alias glog='git log --oneline --decorate --color --graph'
 alias ga='git add'
 alias yolopr='gh pr create && gh pr merge --squash --auto'
 
+# more helpers
+alias yt-m4a='yt-dlp --format "ba[ext=m4a]"'
+
 # go bin
 if command -v go > /dev/null; then
   export PATH="$PATH:$(go env GOPATH)/bin"
