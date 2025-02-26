@@ -18,5 +18,11 @@ if ! grep -q "$zsh_include" ~/.zshrc 2> /dev/null; then
     echo "$zsh_include" >> ~/.zshrc
 fi
 
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/
 echo "==> configure git"
-(set -x; git config --global push.default current)
+(
+  set -x
+  git config --global push.default current
+  git config --global push.autoSetupRemote true
+  git config --global tag.sort version:refname
+)
